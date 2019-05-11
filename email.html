@@ -10,6 +10,30 @@
 </head>
 
 <body>
+  <h2>sprawdz czy wypełniono maila.</h2>
+
+  <label for="">Wprowadz mail</label>
+  <input type="email" name="email" id="email">
+  <input type="submit" id='btn' value="Wyślij">
+
+  <script>
+    let email = document.getElementById('email');
+
+
+
+    document.getElementById('btn').addEventListener('click', function () {
+      console.log('klik');
+      if (email.value.length > 0) {
+        alert('dziękujemy')
+      } else {
+
+        alert('wypełnij maila')
+      }
+
+    })
+
+
+  </script>
 
 </body>
 
