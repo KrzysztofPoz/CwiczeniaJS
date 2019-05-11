@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" />
+  <title>Document</title>
+</head>
+
+<body>
+  <h2>Wartość rabatu</h2>
+  <label for="">ilosc</label>
+  <input type="text" name="" id="quant">
+  <label for="">cena</label>
+  <input type="text" name="" id="price">
+  <label for="">Podatek w procentach</label>
+  <input type="text" name="" id="tax" value="23">
+  <label for="">Rabat</label>
+  <input type="text" name="" id="discount" value="">
+  <label for="">total</label>
+  <input type="text" name="" id="total">
+  <br>
+  <button onclick="przyciski()">Oblicz</button>
+
+  <script>
+
+
+    function przyciski() {
+      let x = document.getElementById('quant').value;
+      let y = document.getElementById('price').value;
+      let q = x * y;
+      let tax = document.getElementById('tax').value;
+      let dis = document.getElementById('discount').value;
+      let total = document.getElementById('total');
+      tax = tax / 100;
+      tax = tax + 1;
+      q = q * tax;
+      q -= dis;
+      total.value = q.toFixed(2);
+
+
+      // document.getElementById('total1').textContent = q;
+
+
+
+    }
+
+
+
+  </script>
+</body>
+
+</html>
