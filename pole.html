@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" />
+  <title>Objętość Kuli</title>
+</head>
+
+<body>
+  <div class="container">
+    <h2>Objętość Kuli</h2>
+    <label for="">Promień</label>
+    <input type="text" name="radius" id="radius" value="">
+    <label for="">Objętość</label>
+    <input type="text" name="volume" id="volume" value="">
+
+    <br>
+    <button onclick="calculate()">Oblicz</button>
+  </div>
+
+
+
+  <script>
+    // pobranie wartości promień 
+
+    // let total;
+
+
+
+    function calculate() {
+      let volume;
+      let radadius = document.getElementById('radius').value;
+
+
+      // console.log('clikc');
+      radadius = Math.abs(radadius)
+      volume = (4 / 3) * Math.PI * Math.pow(radadius, 3);
+      volume = volume.toFixed(4);
+      // wyświetlenie wartości w inpucie
+      document.getElementById('volume').value = volume;
+    };
+
+
+  </script>
+</body>
+
+</html>
